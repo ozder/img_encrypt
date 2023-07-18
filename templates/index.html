@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Image Encryption App</title>
+</head>
+<body>
+    <h1>Image Encryption App</h1>
+    <form action="/encrypt" method="post" enctype="multipart/form-data">
+        <input type="file" name="image" accept="image/*" required>
+        <label for="width">Width:</label>
+        <input type="text" name="width" required>
+        <label for="height">Height:</label>
+        <input type="text" name="height" required>
+        <button type="submit">Encrypt Image</button>
+    </form>
+
+    <hr>
+
+    <form action="/decrypt" method="post" enctype="multipart/form-data">
+        <input type="file" name="encrypted_image" accept="image/*" required>
+        <button type="submit">Decrypt Image</button>
+    </form>
+</body>
+</html>
